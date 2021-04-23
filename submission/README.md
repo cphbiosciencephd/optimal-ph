@@ -1,7 +1,5 @@
 # Programming Catalyzers
 
-Our team is from ... and we think proteins are cool 🙌
-
 ### Project Description
 We are working on the `optimal-ph` challenge.
 To predict using our model, press "Open Application" on the left. 
