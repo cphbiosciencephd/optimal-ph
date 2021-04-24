@@ -24,8 +24,8 @@ y_predictions_blm = BaselineModel(
     model_file_path='src/model.pickle').predict(df)
 y_predictions = (
     y_predictions_xgb * 0. +
-    y_predictions_wn * 1. +
-    y_predictions_dnn * 0. +
+    y_predictions_wn * 0.5 +
+    y_predictions_dnn * 0.5 +
     y_predictions_blm * 0.
 )
 
