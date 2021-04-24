@@ -1,7 +1,7 @@
 import argparse
 import pandas as pd
 from wn import Wavenet
-from dnn import DeepNeuralNetwork1
+# from dnn import DeepNeuralNetwork1
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input_csv', default='input.csv')
@@ -16,8 +16,8 @@ with open(args.input_csv) as input_csv:
 
 # Run predictions
 y_predictions_wn = Wavenet().predict(df)
-y_predictions_dnn = DeepNeuralNetwork1().predict(df)
-y_predictions = y_predictions_wn * 0.3 + y_predictions_dnn * 0.7
+# y_predictions_dnn = DeepNeuralNetwork1().predict(df)
+y_predictions = y_predictions_wn  # * 0.3 + y_predictions_dnn * 0.7
 
 # Save predictions to file
 df_predictions = pd.DataFrame({'prediction': y_predictions})
