@@ -23,10 +23,10 @@ y_predictions_xgb = Xgboost().predict(df)
 y_predictions_blm = BaselineModel(
     model_file_path='src/model.pickle').predict(df)
 y_predictions = (
-    y_predictions_xgb * 0.33 +
-    y_predictions_wn * 0.33 +
-    y_predictions_dnn * 0.33 +
-    y_predictions_blm * 0.01
+    y_predictions_xgb * 0.25 +
+    y_predictions_wn * 0.25 +
+    y_predictions_dnn * 0.25 +
+    y_predictions_blm * 0.25
 )
 
 # Save predictions to file
