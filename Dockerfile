@@ -4,6 +4,7 @@ WORKDIR /home/biolib
 
 RUN conda install --yes pytorch tensorflow scikit-learn pandas numpy \
     && conda clean -afy
+RUN pip install xgboost
 
 COPY . .
 
