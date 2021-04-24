@@ -24,5 +24,5 @@ class Wavenet:
     def predict(self, df_test):
         X = self.preprocess_sequences(df_test["sequence"])
         return tf.keras.models.load_model(
-            (pathlib.Path(__file__).parent / "wn.h5").resolve().as_posix()
+            (pathlib.Path(__file__).parent / "wn2.h5").resolve().as_posix()
         ).predict(X).flatten()

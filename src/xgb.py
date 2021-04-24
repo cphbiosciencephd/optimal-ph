@@ -31,7 +31,6 @@ class Xgboost:
 
     def predict(self, df_test):
         X = self.preprocess_sequences(df_test["sequence"])
-        print(X)
         xgb = xgboost.XGBRegressor()
         xgb.load_model(
             (pathlib.Path(__file__).parent /
