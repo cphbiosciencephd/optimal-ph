@@ -18,8 +18,8 @@ with open(args.input_csv) as input_csv:
 y_predictions_wn = Wavenet().predict(df)
 y_predictions_dnn = DeepNeuralNetwork1().predict(df)
 y_predictions = (
-    y_predictions_wn * 1. +
-    y_predictions_dnn * 0.
+    y_predictions_wn * 0.5 +
+    y_predictions_dnn * 0.5
 )
 
 # Save predictions to file
