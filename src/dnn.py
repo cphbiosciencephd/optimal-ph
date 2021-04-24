@@ -2,7 +2,7 @@ from collections import Counter
 
 import numpy as np
 import pandas as pd
-from keras.models import load_model
+import tensorflow as tf
 
 VOCAB = "GPAVLIMCFYWHKRQNEDSTBXZ"
 VOCAB_SIZE = len(VOCAB)
@@ -26,4 +26,4 @@ class DeepNeuralNetwork1:
 
     def predict(self, df_test):
         X = self.preprocess_sequences(df_test["sequence"])
-        return load_model("dnn.h5").predict(X).flatten()
+        return tf.keras.models.load_model("dnn.h5").predict(X).flatten()
