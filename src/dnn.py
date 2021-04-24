@@ -3,9 +3,12 @@ from collections import Counter
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+import pathlib
 
 VOCAB = "GPAVLIMCFYWHKRQNEDSTBXZ"
 VOCAB_SIZE = len(VOCAB)
+
+current_dir = str(pathlib.Path(__file__).parent.absolute())
 
 
 class DeepNeuralNetwork1:
@@ -26,4 +29,5 @@ class DeepNeuralNetwork1:
 
     def predict(self, df_test):
         X = self.preprocess_sequences(df_test["sequence"])
-        return tf.keras.models.load_model("dnn.h5").predict(X).flatten()
+        return tf.keras.models.load_model(
+            current_dir + "/dnn.h5").predict(X).flatten()
