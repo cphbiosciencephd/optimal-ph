@@ -1,7 +1,7 @@
 import argparse
 import pandas as pd
 from wn import Wavenet
-# from dnn import DeepNeuralNetwork1
+from dnn import DeepNeuralNetwork1
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input_csv', default='input.csv')
