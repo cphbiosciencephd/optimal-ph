@@ -26,4 +26,4 @@ class DeepNeuralNetwork1:
 
     def predict(self, df_test):
         X = self.preprocess_sequences(df_test["sequence"])
-        return load_model("dnn.h5").predict(X)
+        return load_model("dnn.h5").predict(X).flatten()
