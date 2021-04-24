@@ -4,7 +4,7 @@ import pathlib
 
 VOCAB = "GPAVLIMCFYWHKRQNEDSTBXZ"
 VOCAB_SIZE = len(VOCAB)
-SEQ_SIZE = 72
+SEQ_SIZE = 300
 
 AA_MAPPER = {aa: i for i, aa in enumerate(VOCAB, 1)}
 
