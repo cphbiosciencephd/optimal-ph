@@ -17,7 +17,7 @@ with open(args.input_csv) as input_csv:
 # Run predictions
 y_predictions_wn = Wavenet().predict(df)
 y_predictions_dnn = DeepNeuralNetwork1().predict(df)
-y_predictions = y_predictions_wn * 0.7 + y_predictions_dnn * 0.3
+y_predictions = y_predictions_wn * 0.3 + y_predictions_dnn * 0.7
 
 # Save predictions to file
 df_predictions = pd.DataFrame({'prediction': y_predictions})
